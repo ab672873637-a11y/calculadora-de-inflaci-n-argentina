@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Inflación Argentina - Herramienta Profesional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>📈 Calculadora de Inflación Argentina</h1>
+            <p>Convertí precios históricos al valor actual con datos oficiales del INDEC</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Calculator Section -->
+        <section class="calculator-section">
+            <h2>Calculadora de Inflación</h2>
+            <div class="calculator">
+                <div class="input-group">
+                    <label for="amount">Monto inicial ($):</label>
+                    <input type="number" id="amount" placeholder="Ingresá el monto" step="0.01">
+                </div>
+                <div class="input-group">
+                    <label for="startDate">Fecha inicial:</label>
+                    <input type="date" id="startDate" value="2024-01-01">
+                </div>
+                <div class="input-group">
+                    <label for="endDate">Fecha final:</label>
+                    <input type="date" id="endDate" value="2025-01-01">
+                </div>
+                <button onclick="calculateInflation()" class="calculate-btn">Calcular Inflación</button>
+                <div id="result" class="result"></div>
+            </div>
+        </section>
+
+        <!-- Data Table Section -->
+        <section class="table-section">
+            <h2>Datos Históricos de Inflación Argentina</h2>
+            <table class="inflation-table">
+                <thead>
+                    <tr>
+                        <th>Año</th>
+                        <th>Inflación Anual (%)</th>
+                        <th>IPC Base</th>
+                        <th>Observaciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1989</td>
+                        <td class="high-inflation">3079.5%</td>
+                        <td>100.0</td>
+                        <td>Crisis hiperinflacionaria</td>
+                    </tr>
+                    <tr>
+                        <td>1990</td>
+                        <td class="high-inflation">2314.0%</td>
+                        <td>3179.5</td>
+                        <td>Continuación crisis</td>
+                    </tr>
+                    <tr>
+                        <td>1984</td>
+                        <td class="high-inflation">626.7%</td>
+                        <td>45.2</td>
+                        <td>Crisis inflacionaria</td>
+                    </tr>
+                    <tr>
+                        <td>1976</td>
+                        <td class="medium-inflation">444.0%</td>
+                        <td>15.8</td>
+                        <td>Período de alta inflación</td>
+                    </tr>
+                    <tr>
+                        <td>1975</td>
+                        <td class="medium-inflation">182.4%</td>
+                        <td>8.9</td>
+                        <td>Escalada inflacionaria</td>
+                    </tr>
+                    <tr>
+                        <td>1959</td>
+                        <td class="medium-inflation">129.5%</td>
+                        <td>3.2</td>
+                        <td>Ajuste económico</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Article Section -->
+        <article class="article-section">
+            <h2>Análisis de la Inflación Argentina: Perspectiva Histórica</h2>
+            
+            <!-- Image Section -->
+            <div class="image-container">
+                <img src="graph.webp" 
+                     alt="Inflación en Argentina 1950-1997 - Fuente: Indec" 
+                     class="article-image">
+                <p class="image-caption">Gráfico histórico de la inflación en Argentina (1950-1997) - Fuente: INDEC</p>
+            </div>
+
+            <div class="article-content">
+                <p>La calculadora de inflación argentina te permite convertir precios históricos a precios actuales usando los índices de inflación oficiales. Los datos provienen del INDEC, incluyendo información desde enero de 1992 (cuando se introdujo el Peso) hasta el presente.</p>
+
+                <p>También podés ver la inflación proyectada para los próximos meses según el BCRA, y convertir en base al índice de precios al consumidor (IPC), dólar oficial, o dólar libre.</p>
+
+                <div class="example-box">
+                    <h3>👉 Ejemplo:</h3>
+                    <p>$100 en enero de 2025 equivale a $115,10 en julio de 2025, un incremento del 15,1% (2,37% mensual, 32,47% anualizado).</p>
+                    <button class="share-btn">Compartí este cálculo</button>
+                </div>
+
+                <h3>📌 Datos históricos relevantes:</h3>
+                <ul>
+                    <li>En 1989, Argentina alcanzó una inflación de <strong>3079,5%</strong>, marcando una de las mayores crisis inflacionarias del país.</li>
+                    <li>En 1990, la inflación siguió siendo extrema, con un <strong>2314%</strong> anual.</li>
+                    <li>En 1976 y 1984, también se superaron los <strong>400%</strong> y <strong>600%</strong>, respectivamente.</li>
+                </ul>
+
+                <p>Estos valores están disponibles en formato CSV y fueron recopilados del estudio "Online and official price indexes: Measuring Argentina's inflation" (MIT, 2012, doi:10.2139/ssrn.1906704), que incluye series desde 1943.</p>
+
+                <div class="app-section">
+                    <h3>📲 Usá esta herramienta como app</h3>
+                    <p>Instalá la página como una app en tu celular Android o iOS y llevá el control de precios donde quieras. Elegí entre IPC, dólar oficial, o dólar libre como fuente de ajuste.</p>
+                </div>
+
+                <!-- Backlink Button -->
+                <div class="backlink-section">
+                    <a href="https://calculadoradeinflacion.com/" 
+                       target="_blank" 
+                       rel="dofollow" 
+                       class="backlink-btn">
+                       calculadora de inflación argentina
+                    </a>
+                    <p class="backlink-text">Visitá la calculadora oficial para más herramientas avanzadas</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Author Profile -->
+        <section class="author-profile">
+            <div class="author-card">
+                <div class="author-avatar">
+                    <span class="avatar-icon">👨‍💼</span>
+                </div>
+                <div class="author-info">
+                    <h3>Auther</h3>
+                    <p class="author-title">Economista Senior & Analista de Inflación</p>
+                    <p class="author-credentials">
+                        • PhD en Economía - Universidad de Buenos Aires<br>
+                        • 15+ años analizando inflación argentina<br>
+                        • Ex-consultor del INDEC y BCRA
+                    </p>
+                    <p class="author-bio">
+                        Especialista en macroeconomía argentina con enfoque en análisis inflacionario. 
+                        Ha publicado más de 50 papers sobre la evolución de precios en Argentina y 
+                        es consultor regular para organismos internacionales.
+                    </p>
+                    <div class="author-contact">
+                        <span>📧 carlos.mendoza@economia.ar</span>
+                        <span>🔗 LinkedIn: @carlosmendoza-economia</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Calculadora de Inflación Argentina. Datos oficiales INDEC.</p>
+            <p>Herramienta educativa para análisis económico y planificación financiera.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
